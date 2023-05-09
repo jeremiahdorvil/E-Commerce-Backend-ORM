@@ -10,13 +10,13 @@ class Product extends Model {}
 Product.init(
   {
     id: {
-      type: DataTypes.Integer,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     product_name: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false
     },
     price: {
@@ -27,7 +27,7 @@ Product.init(
       }
     },
     stock: {
-      type: DataTypes.Integer,
+      type: DataTypes.INTEGER,
       allowNull: false,
       default: 10,
       validate: {
@@ -35,7 +35,7 @@ Product.init(
       }
     },
     category_id: {
-      type: DataTypes.Integer,
+      type: DataTypes.INTEGER,
       references: {
         model: 'category',
         key: 'id'
